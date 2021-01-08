@@ -1,5 +1,4 @@
-var needle = require('needle');
-
+import * as needle from 'needle'
 let baseUrl='https://books.google.com/ngrams/json'
 
 interface callObjectType{
@@ -23,9 +22,8 @@ export async function getNGram(ngram: string, options: callObjectType){
 	};
 
 	return new Promise(resolve => {
-		needle.request('get', baseUrl, callOptions, function(err: any, resp: { statusCode: number; body: unknown; }) {
+		needle.request('get', baseUrl, callOptions, (err, resp) => {
 			if (!err && resp.statusCode === 200){
-				console.log(resp.body)
 				resolve(resp.body)
 			}
 			else{
