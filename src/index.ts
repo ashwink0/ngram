@@ -9,7 +9,7 @@ interface callObjectType{
 	smoothing ?: number,
 }
 
-async function getNGram(ngram: string, options: callObjectType){
+export async function getNGram(ngram: string, options: callObjectType){
 	if(ngram===''){
 		Error("'ngram' option cannot be empty.")
 	}
@@ -36,7 +36,5 @@ async function getNGram(ngram: string, options: callObjectType){
 		});
 	})
 }
-
-module.exports={getNGram}
 
 
