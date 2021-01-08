@@ -7,9 +7,12 @@ A simple package to interact with the Google Books Ngram API.
 [![License](https://img.shields.io/npm/l/google-ngram.svg)](https://github.com/ashwink0/google-ngram/blob/master/LICENSE)
 [![Build Status](https://travis-ci.com/ashwink0/ngram.svg?branch=main)](https://travis-ci.com/ashwink0/ngram)
 
+[![a](https://nodei.co/npm/google-ngram.png?mini=true)](https://npmjs.org/package/google-ngram)
+
 <!-- toc -->
 * [Example Usage](#example-usage)
 * [Parameters](#parameters)
+
 <!-- tocstop -->
 
 # Example Usage:
@@ -25,9 +28,9 @@ ngram.getNGram('the', {corpus: 28, smoothing: 4, startYear: 1980}).then(r => con
 ```
 
 # Parameters:
-* getNGram([Content](#content), [Options](#options))
+* getNGram(Content, Options)
 
-    ###Content
+    ### Content
       
   | Type | Notes |
   | --- | --- |
@@ -45,3 +48,4 @@ ngram.getNGram('the', {corpus: 28, smoothing: 4, startYear: 1980}).then(r => con
       | endYear | number | optional |
       | corpus | number | optional |
       | smoothing | number | optional |
+    

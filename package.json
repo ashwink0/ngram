@@ -4,7 +4,7 @@
   "description": "A simple package to interact with the Google Books Ngram API.",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "tsc"
   },
   "repository": {
@@ -19,11 +19,14 @@
   },
   "homepage": "https://github.com/ashwink0/ngram#readme",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.12.7",
     "@types/node": "14.0.13",
+    "jest": "^26.6.3",
     "ts-node": "8.10.2",
     "typescript": "3.9.5"
   },
   "dependencies": {
+    "@types/jest": "^26.0.20",
     "@types/needle": "^2.5.1",
     "needle": "^2.6.0"
   }

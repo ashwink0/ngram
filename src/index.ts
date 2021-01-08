@@ -10,7 +10,9 @@ interface callObjectType{
 
 export async function getNGram(ngram: string, options: callObjectType){
 	if(ngram===''){
-		return([]);
+		return(new Promise(resolve => {
+			resolve([])
+		}));
 	}
 
 	let callOptions={
