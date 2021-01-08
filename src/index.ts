@@ -10,7 +10,7 @@ interface callObjectType{
 
 export async function getNGram(ngram: string, options: callObjectType){
 	if(ngram===''){
-		Error("'ngram' option cannot be empty.")
+		return([]);
 	}
 
 	let callOptions={

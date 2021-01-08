@@ -1,7 +1,7 @@
 {
   "name": "google-ngram",
   "version": "1.0.6",
-  "description": "",
+  "description": "A simple package to interact with the Google Books Ngram API.",
   "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ashwink0/ngram/issues"
   },
