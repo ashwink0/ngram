@@ -37,4 +37,6 @@ async function getNGram(ngram: string, options: callObjectType){
 	})
 }
 
+module.exports={getNGram}
+
 
