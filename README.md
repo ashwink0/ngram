@@ -5,15 +5,9 @@ A simple package to interact with the Google Books Ngram API.
 
 [![Version](https://img.shields.io/npm/v/google-ngram.svg)](https://npmjs.org/package/google-ngram)
 [![License](https://img.shields.io/npm/l/google-ngram.svg)](https://github.com/ashwink0/google-ngram/blob/master/LICENSE)
-[![Build Status](https://travis-ci.com/ashwink0/ngram.svg?branch=main)](https://travis-ci.com/ashwink0/ngram)
 
 [![a](https://nodei.co/npm/google-ngram.png?mini=true)](https://npmjs.org/package/google-ngram)
 
-<!-- toc -->
-* [Example Usage](#example-usage)
-* [Parameters](#parameters)
-
-<!-- tocstop -->
 
 # Example Usage:
 ``` js
@@ -28,7 +22,7 @@ ngram.getNGram('the', {corpus: 28, smoothing: 4, startYear: 1980}).then(r => con
 ```
 
 # getNGram(Content, Options)
-* ##Parameters
+* Parameters
 
     ### Content
       
@@ -49,7 +43,8 @@ ngram.getNGram('the', {corpus: 28, smoothing: 4, startYear: 1980}).then(r => con
       | corpus | number | optional |
       | smoothing | number | optional |
 
-* ##Return
+* Return
+  
     | Type | Notes |
         | --- | --- |
     | Promise | Resolves => Object |
