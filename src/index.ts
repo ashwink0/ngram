@@ -11,7 +11,7 @@ interface callObjectType{
 export async function getNGram(ngram: string, options: callObjectType){
 	if(ngram===''){
 		return(new Promise(resolve => {
-			resolve([])
+			resolve({})
 		}));
 	}
 
@@ -26,7 +26,7 @@ export async function getNGram(ngram: string, options: callObjectType){
 	return new Promise(resolve => {
 		needle.request('get', baseUrl, callOptions, (err, resp) => {
 			if (!err && resp.statusCode === 200){
-				resolve(resp.body)
+				resolve(resp.body[0])
 			}
 			else{
 				resolve({

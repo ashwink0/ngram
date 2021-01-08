@@ -27,8 +27,8 @@ ngram.getNGram('the', {corpus: 28, smoothing: 4, startYear: 1980}).then(r => con
 
 ```
 
-# Parameters:
-* getNGram(Content, Options)
+# getNGram(Content, Options)
+* ##Parameters
 
     ### Content
       
@@ -48,4 +48,14 @@ ngram.getNGram('the', {corpus: 28, smoothing: 4, startYear: 1980}).then(r => con
       | endYear | number | optional |
       | corpus | number | optional |
       | smoothing | number | optional |
-    
+
+* ##Return
+    | Type | Notes |
+        | --- | --- |
+    | Promise | Resolves => Object |
+    * Object Attributes
+
+      | Name | Type | Notes |
+      | --- | --- | --- |
+      | ngram | string | The content word |
+      | timeseries | Array | List of percents |
