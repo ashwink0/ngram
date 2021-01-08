@@ -44,9 +44,8 @@ ngram.getNGram('the', {corpus: 28, smoothing: 4, startYear: 1980}).then(r => con
       | smoothing | number | optional |
 
 * Return
-  
     | Type | Notes |
-        | --- | --- |
+    | --- | --- |
     | Promise | Resolves => Object |
     * Object Attributes
 
