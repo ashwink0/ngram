@@ -1,6 +1,5 @@
 import * as needle from 'needle'
 let baseUrl='https://books.google.com/ngrams/json'
-
 interface callObjectType{
 	startYear ?: number,
 	endYear ?: number,
@@ -11,7 +10,7 @@ interface callObjectType{
 export async function getNGram(ngram: string, options: callObjectType){
 	if(ngram===''){
 		return(new Promise(resolve => {
-			resolve({})
+			resolve([])
 		}));
 	}
 
@@ -20,13 +19,13 @@ export async function getNGram(ngram: string, options: callObjectType){
 		year_end: options.endYear || 2019,
 		corpus: options.corpus ||  26,
 		smoothing: options.smoothing ||  3,
-		content: ngram
+		content: encodeURIComponent(ngram)
 	};
 
 	return new Promise(resolve => {
 		needle.request('get', baseUrl, callOptions, (err, resp) => {
 			if (!err && resp.statusCode === 200){
-				resolve(resp.body[0])
+				resolve(resp.body)
 			}
 			else{
 				resolve({
@@ -36,5 +35,3 @@ export async function getNGram(ngram: string, options: callObjectType){
 		});
 	})
 }
-
-
