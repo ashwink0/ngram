@@ -32,25 +32,21 @@ ngram.getNGram('the', {corpus: 28, smoothing: 4, startYear: 1980}).then(r => con
 
   ### Options
   | Type | Notes |
-      | --- | --- |
+  | --- | --- |
   | Object | Required |
-    * Object Attributes
-
-      | Name | Type | Notes |
-            | --- | --- | --- |
-      | year_start | number | optional |
-      | year_end | number | optional |
-      | corpus | number | optional |
-      | smoothing | number | optional |
-
+  * Object Attributes
+    | Name | Type | Notes |
+    | --- | --- | --- |
+    | year_start | number | optional |
+    | year_end | number | optional |
+    | corpus | number | optional |
+    | smoothing | number | optional |
 * Return
-
   | Type | Notes |
-          | --- | --- |
+  | --- | --- |
   | Promise | Resolves => Array <Object\>
-    * Object Attributes
-
-      | Name | Type | Notes |
-            | --- | --- | --- |
-      | ngram | string | The content word |
-      | timeseries | Array | List of percents |
+  * Object Attributes
+  | Name | Type | Notes |
+  | --- | --- | --- |
+  | ngram | string | The content word |
+  | timeseries | Array | List of percents |
