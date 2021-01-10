@@ -14,13 +14,13 @@ test('Test Content', () => {
 });
 
 test('Fixed Year', () => {
-	return ngram.getNGram('the', {startYear: 1980, endYear: 1983}).then(data => {
+	return ngram.getNGram('the', {year_start: 1980, year_end: 1983}).then(data => {
 		expect(data[0].timeseries.length).toBe(4);
 	});
 });
 
 test('Multi Element', () => {
-	return ngram.getNGram('*', {startYear: 1980, endYear: 1983}).then(data => {
+	return ngram.getNGram('and *', {}).then(data => {
 		expect(data.length>1).toBe(true);
 	});
 });

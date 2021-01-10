@@ -1,6 +1,6 @@
 interface callObjectType {
-    startYear?: number;
-    endYear?: number;
+    year_start?: number;
+    year_end?: number;
     corpus?: number;
     smoothing?: number;
 }

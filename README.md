@@ -38,8 +38,8 @@ ngram.getNGram('the', {corpus: 28, smoothing: 4, startYear: 1980}).then(r => con
 
       | Name | Type | Notes |
             | --- | --- | --- |
-      | startYear | number | optional |
-      | endYear | number | optional |
+      | year_start | number | optional |
+      | year_end | number | optional |
       | corpus | number | optional |
       | smoothing | number | optional |
 
