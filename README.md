@@ -45,8 +45,9 @@ ngram.getNGram('the', {corpus: 28, smoothing: 4, startYear: 1980}).then(r => con
   | Type | Notes |
   | --- | --- |
   | Promise | Resolves => Array <Object\>
+  
   * Object Attributes
-  | Name | Type | Notes |
-  | --- | --- | --- |
-  | ngram | string | The content word |
-  | timeseries | Array | List of percents |
+    | Name | Type | Notes |
+    | --- | --- | --- |
+    | ngram | string | The content word |
+    | timeseries | Array | List of percents |
