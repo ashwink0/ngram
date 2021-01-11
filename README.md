@@ -17,12 +17,15 @@ const ngram=require('google-ngram')
 ngram.getNGram('the', {}).then(r => console.log(r))
 
 //with options
-ngram.getNGram('the', {corpus: 28, smoothing: 4, startYear: 1980}).then(r => console.log(r))
+ngram.getNGram('the', {corpus: 28, smoothing: 4}).then(r => console.log(r))
+
+//with wildcard
+ngram.getNGram('the *', {}).then(r => console.log(r))
+
 
 ```
 
 # getNGram(Content, Options)
-* Parameters
 
   ### Content
 
@@ -31,23 +34,6 @@ ngram.getNGram('the', {corpus: 28, smoothing: 4, startYear: 1980}).then(r => con
   | String | Required |
 
   ### Options
-  | Type | Notes |
-  | --- | --- |
-  | Object | Required |
-  * Object Attributes
-    | Name | Type | Notes |
-    | --- | --- | --- |
-    | year_start | number | optional |
-    | year_end | number | optional |
-    | corpus | number | optional |
-    | smoothing | number | optional |
-* Return
-  | Type | Notes |
-  | --- | --- |
-  | Promise | Resolves => Array <Object\>
-  
-  * Object Attributes
-    | Name | Type | Notes |
-    | --- | --- | --- |
-    | ngram | string | The content word |
-    | timeseries | Array | List of percents |
+  | Type | Shape | Default Values | Notes |
+  | --- | --- | --- | --- |
+  | Object | {corpus: int, <br />smoothing: int, <br />year_start: int, <br />year_end: int} <br /><br />(all are optional)| {corpus: 26 (English Corpus), <br />smoothing: 3, <br />year_start: 1800, <br />year_end: 2019} | Required |
