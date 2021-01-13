@@ -20,7 +20,19 @@ test('Fixed Year', () => {
 });
 
 test('Multi Element', () => {
-	return ngram.getNGram('and *', {}).then(data => {
+	return ngram.getNGram('and *').then(data => {
+		expect(data.length>1).toBe(true);
+	});
+});
+
+test('No Options', () => {
+	return ngram.getNGram('the').then(data => {
+		expect(data.length===1).toBe(true);
+	});
+});
+
+test('Case Sensitive', () => {
+	return ngram.getNGram('the', {case_insensitive: true}).then(data => {
 		expect(data.length>1).toBe(true);
 	});
 });

@@ -14,26 +14,37 @@ A simple package to interact with the Google Books Ngram API.
 const ngram=require('google-ngram')
 
 //simple usage
-ngram.getNGram('the', {}).then(r => console.log(r))
+ngram.getNGram('the').then(r => console.log(r))
 
 //with options
-ngram.getNGram('the', {corpus: 28, smoothing: 4}).then(r => console.log(r))
+ngram.getNGram('the', {year_start: 1920, corpus: 10}).then(r => console.log(r))
 
 //with wildcard
-ngram.getNGram('the *', {}).then(r => console.log(r))
-
+ngram.getNGram('the *').then(r => console.log(r))
 
 ```
 
-# getNGram(Content, Options)
+# getNGram(Content, Options) => Promise: Array
 
-  ### Content
+### Content
+| Type | Notes |
+| --- | --- |
+| String | Required |
 
-  | Type | Notes |
-    | --- | --- |
-  | String | Required |
+### Options
+| Type | Parameters | Default Values | Notes |
+| --- | --- | --- | --- |
+| Object | {corpus: int, <br />smoothing: int, <br />year_start: int, <br />year_end: int, <br /> case_insensitive: boolean} <br /><br />(all are optional)| {corpus: 26 (English Corpus), <br />smoothing: 3, <br />year_start: 1800, <br />year_end: 2019, <br /> case_insensitive: false} | Optional |
 
-  ### Options
-  | Type | Shape | Default Values | Notes |
-  | --- | --- | --- | --- |
-  | Object | {corpus: int, <br />smoothing: int, <br />year_start: int, <br />year_end: int} <br /><br />(all are optional)| {corpus: 26 (English Corpus), <br />smoothing: 3, <br />year_start: 1800, <br />year_end: 2019} | Required |
+
+## Parameter Information:
+| Corpus | Number |
+| ---| ---|
+| English 2019 (Default) |26|
+| American English 2019 | 28 |
+| British English | 29 |
+| English Fiction | 27 |
+| Chinese(Simplified) | 34 |
+| French | 30 |
+
+
