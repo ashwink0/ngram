@@ -1,6 +1,6 @@
 {
   "name": "google-ngram",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A simple package to interact with the Google Books Ngram API.",
   "main": "./lib/index.js",
   "scripts": {
