@@ -11,13 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/ashwink0/ngram.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["google-ngram-viewer"],
+  "author": "ashwink0",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ashwink0/ngram/issues"
   },
-  "homepage": "https://github.com/ashwink0/ngram#readme",
+  "homepage": "https://github.com/ashwink0/ngram",
   "devDependencies": {
     "@babel/preset-typescript": "^7.12.7",
     "@types/node": "14.0.13",

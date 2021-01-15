@@ -36,3 +36,9 @@ test('Case Sensitive', () => {
 		expect(data.length>1).toBe(true);
 	});
 });
+
+test('Test Error', () => {
+	return ngram.getNGram(true, []).then(data => {
+		expect(data.length===1).toBe(true);
+	});
+});
