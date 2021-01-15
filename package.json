@@ -1,6 +1,6 @@
 {
   "name": "google-ngram",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A simple package to interact with the Google Books Ngram API.",
   "main": "./lib/index.js",
   "scripts": {
@@ -11,7 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/ashwink0/ngram.git"
   },
-  "keywords": ["google-ngram-viewer"],
+  "keywords": [
+    "google-ngram-viewer"
+  ],
   "author": "ashwink0",
   "license": "MIT",
   "bugs": {
