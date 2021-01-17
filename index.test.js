@@ -19,7 +19,7 @@ test('Fixed Year', () => {
 	});
 });
 
-test('Multi Element', () => {
+test('Wildcard', () => {
 	return ngram.getNGram('and *').then(data => {
 		expect(data.length>1).toBe(true);
 	});

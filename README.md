@@ -19,6 +19,9 @@ ngram.getNGram('the').then(r => console.log(r))
 //with options
 ngram.getNGram('the', {year_start: 1920, corpus: 10}).then(r => console.log(r))
 
+//multiple words
+ngram.getNGram('the, and').then(r => console.log(r))
+
 //with wildcard
 ngram.getNGram('the *').then(r => console.log(r))
 
@@ -47,4 +50,21 @@ ngram.getNGram('the *').then(r => console.log(r))
 | Chinese(Simplified) | 34 |
 | French | 30 |
 
-
+## Returned Data:
+```json
+[
+  {
+    "ngram": "<word>",
+    "parent": "", //used for wildcard
+    "type": "NGRAM",
+    "timeseries": [
+      0.057974955067038536,
+      0.057649505138397214,
+      0.057653142139315605,
+      0.05750594554202897,
+      ...
+    ]
+  }
+  ... //for multiple words or wildcard
+]
+```
